@@ -39,4 +39,5 @@ if __name__ == "__main__":
     for i in range(n-1):
         d['node{}'.format(i)].next = d['node{}'.format(i+1)]
 
-    print('\nAfter Inserting =>', llist.display(llist.head))
+    # print('\nAfter Inserting =>', llist.display(llist.head))
+    llist.display(llist.head)

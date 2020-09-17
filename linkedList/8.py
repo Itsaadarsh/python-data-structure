@@ -18,6 +18,16 @@ class LinkedList:
             print(temp.data)
         return temp
 
+        # Recursive Method
+        if(node != None):
+            ind = 0
+            if(node.data == key):
+                return ind
+            ind = +1
+            return(self.display(node.next, key))
+        else:
+            return 0
+
 
 if __name__ == "__main__":
 

@@ -13,24 +13,24 @@ class LinkedList:
 
     def display(self, node, key):
         # Looping Method
-        # temp = self.head
-        # ind = 0
-        # while(temp):
-        #     ind += 1
-        #     if(temp.data == key):
-        #         return ind - 1
-        #     temp = temp.next
-        # return 'NOT FOUND'
+        temp = self.head
+        ind = 0
+        while(temp):
+            ind += 1
+            if(temp.data == key):
+                return ind - 1
+            temp = temp.next
+        return 'NOT FOUND'
 
         # Recursive Method
-        if(node != None):
-            ind = 0
-            if(node.data == key):
-                return ind
-            ind = +1
-            return(self.display(node.next, key))
-        else:
-            return 0
+        # if(node != None):
+        #     ind = 0
+        #     if(node.data == key):
+        #         return ind
+        #     ind = +1
+        #     return(self.display(node.next, key))
+        # else:
+        #     return 0
 
 
 if __name__ == "__main__":

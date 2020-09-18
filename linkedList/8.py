@@ -1,4 +1,5 @@
 # Inserting elements in a Linked List
+# And saving nodes into an OBJECT (d{})
 
 class Node:
     def __init__(self, data):

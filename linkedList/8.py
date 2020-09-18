@@ -10,23 +10,12 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def display(self, node, newEle):
-        # Looping Method
+    def display(self, node):
+
         temp = self.head
         while(temp):
+            print('\n', temp.data)
             temp = temp.next
-            print(temp.data)
-        return temp
-
-        # Recursive Method
-        if(node != None):
-            ind = 0
-            if(node.data == key):
-                return ind
-            ind = +1
-            return(self.display(node.next, key))
-        else:
-            return 0
 
 
 if __name__ == "__main__":
@@ -38,16 +27,62 @@ if __name__ == "__main__":
     for i in range(n):
         ele = (input(f'\nEnter the element for node {i+1} : '))
         d["node{}".format(i)] = Node(ele)
+# ---------------------------------------------------------------------------
+
+    # Inserting at the BEGINNING of the linked list
+    # llist.head = d['node0']
+
+    # Linking new node with the first node
+
+    # newEle = input('\nEnter the new element : ')
+    # d["node{}".format(n)] = Node(newEle)
+    # d["node{}".format(n)].next = llist.head
+    # llist.head = d["node{}".format(n)]
+
+    # for i in range(n-1):
+    #     d['node{}'.format(i)].next = d['node{}'.format(i+1)]
+
+# ---------------------------------------------------------------------------
+    # # Inserting at the END of the linked list
+    # llist.head = d['node0']
+
+    # newEle = input('\nEnter the new element : ')
+    # d["node{}".format(n)] = Node(newEle)
+
+    # # Linking new node with the LAST node
+    # for i in range(n):
+    #     d['node{}'.format(i)].next = d['node{}'.format(i+1)]
+
+    # print('\nAfter Inserting =>', llist.display(llist.head))
+
+# ---------------------------------------------------------------------------
+
+    # Inserting at a given index of the linked list
 
     llist.head = d['node0']
 
     newEle = input('\nEnter the new element : ')
     d["node{}".format(n)] = Node(newEle)
-    d["node{}".format(n)].next = llist.head
-    llist.head = d["node{}".format(n)]
 
-    for i in range(n-1):
-        d['node{}'.format(i)].next = d['node{}'.format(i+1)]
+    index = int(input("Enter the index of the new number to be inserted : "))
 
-    # print('\nAfter Inserting =>', llist.display(llist.head))
-    llist.display(llist.head)
+    if(index == 0):
+        d["node{}".format(n)].next = llist.head
+        llist.head = d["node{}".format(n)]
+        for i in range(n-1):
+            d['node{}'.format(i)].next = d['node{}'.format(i+1)]
+        llist.display(llist.head)
+
+    elif(index == n):
+        for i in range(n):
+            d['node{}'.format(i)].next = d['node{}'.format(i+1)]
+        llist.display(llist.head)
+
+    else:
+        for i in range(n-1):
+            d['node{}'.format(i)].next = d['node{}'.format(i+1)]
+
+        d["node{}".format(index-1)].next = d["node{}".format(n)]
+        d["node{}".format(n)].next = d["node{}".format(index)]
+        llist.display(llist.head)
+# ---------------------------------------------------------------------------

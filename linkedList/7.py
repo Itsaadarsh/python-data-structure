@@ -23,6 +23,7 @@ class LinkedList:
         newNode = Node(data)
         newNode.next = self.head
         self.head = newNode
+        self.display()
 
     def insertingEnd(self, data):
         newNode = Node(data)
@@ -84,13 +85,49 @@ class LinkedList:
         if(temp):
             self.display()
 
+    def insertingAtAIndex(self, index, data):
+
+        temp = self.head
+        ind = 0
+        while(temp):
+            if(ind == index):
+                newNode = Node(data)
+                newNode.next = temp
+                temp = newNode
+                self.head = temp
+                break
+            ind += 1
+            if (ind == index):
+                newNode = Node(data)
+                newNode.next = temp.next
+                temp.next = newNode
+                break
+            temp = temp.next
+
+        if(temp is None):
+            print('Item Not found at index {}!'.format(index))
+        else:
+            self.display()
+
 
 if __name__ == "__main__":
 
     llist = LinkedList()
-    llist.insertingEnd(0)
-    llist.insertingEnd(1)
-    llist.insertingEnd(2)
+
+    # Creating default nodes with data
+    llist.insertingEnd(5)
+    llist.insertingEnd(4)
     llist.insertingEnd(3)
-    llist.insertingAfterAnItem(3, 'AFTER')
-    llist.insertingBeforeAnItem(3, 'BEFORE')
+    llist.insertingEnd(2)
+
+    #  Inserting at the beginning
+    # llist.insertingBeginning(0)
+
+    #  Inserting after
+    # llist.insertingAfterAnItem(3, 'AFTER')
+
+    #  Inserting before
+    # llist.insertingBeforeAnItem(31, 'BEFORE')
+
+    #  Inserting at a given index
+    # llist.insertingAtAIndex(4, 0)

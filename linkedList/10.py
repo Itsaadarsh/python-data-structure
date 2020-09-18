@@ -50,6 +50,23 @@ class LinkedList:
         if(temp):
             self.display()
 
+    def deletingAnItem(self):
+        item = input('Enter the item you want to delete : ')
+        temp = self.head
+
+        while(temp.next):
+            if(temp.data == item):
+                temp = temp.next
+                self.head = temp
+                break
+            if(temp.next.data == item):
+                temp.next = temp.next.next
+                break
+            temp = temp.next
+
+        if(temp):
+            self.display()
+
 
 if __name__ == "__main__":
 
@@ -62,4 +79,7 @@ if __name__ == "__main__":
     # llist.deletingAtBeginning()
 
     # Deleting at the END
-    llist.deletingAtEnd()
+    # llist.deletingAtEnd()
+
+    # Deleting an item
+    llist.deletingAnItem()

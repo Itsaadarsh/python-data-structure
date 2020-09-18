@@ -41,6 +41,15 @@ class LinkedList:
         self.head = self.head.next
         self.display()
 
+    def deletingAtEnd(self):
+        temp = self.head
+        while(temp.next.next):
+            temp = temp.next
+        temp.next = None
+
+        if(temp):
+            self.display()
+
 
 if __name__ == "__main__":
 
@@ -50,4 +59,7 @@ if __name__ == "__main__":
     llist.creating()
 
     # Deleting at the BEGINNING
-    llist.deletingAtBeginning()
+    # llist.deletingAtBeginning()
+
+    # Deleting at the END
+    llist.deletingAtEnd()

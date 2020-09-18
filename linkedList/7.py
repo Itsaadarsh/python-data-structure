@@ -36,6 +36,11 @@ class LinkedList:
 
     def insertingAfterAnItem(self, item, data):
         temp = self.head
+
+        # If list is empty
+        if(temp is None):
+            print('EMPTY LIST')
+
         while (temp):
             if(temp.data == item):
                 newNode = Node(data)
@@ -52,7 +57,12 @@ class LinkedList:
     def insertingBeforeAnItem(self, item, data):
         temp = self.head
 
+        # If list is empty
+        if(temp is None):
+            print('EMPTY LIST')
+
         while(temp):
+            # Checks  first element in the list
             if(temp.data == item):
                 newNode = Node(data)
                 newNode.next = temp

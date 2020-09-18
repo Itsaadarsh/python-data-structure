@@ -144,16 +144,16 @@ if __name__ == "__main__":
     llist.insertingEnd(2)
 
     #  Inserting at the beginning
-    # llist.insertingBeginning(0)
+    llist.insertingBeginning(0)
 
     #  Inserting after
-    # llist.insertingAfterAnItem(3, 'AFTER')
+    llist.insertingAfterAnItem(3, 'AFTER')
 
     #  Inserting before
-    # llist.insertingBeforeAnItem(31, 'BEFORE')
+    llist.insertingBeforeAnItem(31, 'BEFORE')
 
     #  Inserting at a given index
-    # llist.insertingAtAIndex(4, 0)
+    llist.insertingAtAIndex(4, 0)
 
     #  Inserting at a given position
-    # llist.insertingAtAPosition(5, 0)
+    llist.insertingAtAPosition(5, 0)

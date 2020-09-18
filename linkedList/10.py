@@ -67,6 +67,24 @@ class LinkedList:
         if(temp):
             self.display()
 
+    def deletingAnIndex(self):
+        index = int(input('Enter the index : '))
+        temp = self.head
+        ind = 0
+        while(temp.next):
+            if(ind == index):
+                temp = temp.next
+                self.head = temp
+                break
+            ind += 1
+            if(ind == index):
+                temp.next = temp.next.next
+                break
+            temp = temp.next
+
+        if(temp):
+            self.display()
+
 
 if __name__ == "__main__":
 
@@ -82,4 +100,7 @@ if __name__ == "__main__":
     # llist.deletingAtEnd()
 
     # Deleting an item
-    llist.deletingAnItem()
+    # llist.deletingAnItem()
+
+    # Deleting at an given index
+    llist.deletingAnIndex()

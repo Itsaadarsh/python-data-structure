@@ -13,20 +13,20 @@ class LinkedList:
 
     def display(self, node):
         # Looping Method
-        # temp = self.head
-        # while(temp):
-        #     print(temp.data)
-        #     temp = temp.next
+        temp = self.head
+        while(temp):
+            print(temp.data)
+            temp = temp.next
 
         # Recursive Method
-        if(node != None):
-            print(node.data)  # Prints the linked list as it is. (EG : 5, 2, 9)
-            self.display(node.next)  # RECURSION O(n) & No.of calls (n+!)
+        # if(node != None):
+        #     print(node.data)  # Prints the linked list as it is. (EG : 5, 2, 9)
+        #     self.display(node.next)  # RECURSION O(n) & No.of calls (n+!)
 
-            # self.display(node.next)  # RECURSION O(n) & No.of calls (n+!)
-            # print(node.data)  # Prints the reverserd linked list (EG : 9, 2, 5)
-        else:
-            return
+        #     # self.display(node.next)  # RECURSION O(n) & No.of calls (n+!)
+        #     # print(node.data)  # Prints the reverserd linked list (EG : 9, 2, 5)
+        # else:
+        #     return
 
 
 if __name__ == "__main__":

@@ -109,6 +109,29 @@ class LinkedList:
         else:
             self.display()
 
+    def insertingAtAPosition(self, position, data):
+        temp = self.head
+        pos = 1
+        while(temp):
+            if(pos == position):
+                newNode = Node(data)
+                newNode.next = temp
+                temp = newNode
+                self.head = temp
+                break
+            pos += 1
+            if (pos == position):
+                newNode = Node(data)
+                newNode.next = temp.next
+                temp.next = newNode
+                break
+            temp = temp.next
+
+        if(temp is None):
+            print('Item Not found at index {}!'.format(position))
+        else:
+            self.display()
+
 
 if __name__ == "__main__":
 
@@ -131,3 +154,6 @@ if __name__ == "__main__":
 
     #  Inserting at a given index
     # llist.insertingAtAIndex(4, 0)
+
+    #  Inserting at a given position
+    # llist.insertingAtAPosition(5, 0)

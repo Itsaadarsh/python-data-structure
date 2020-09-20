@@ -29,6 +29,15 @@ class Stack:
             self.top -= 1
             print('Data Popped {}'.format(self.stack))
 
+    def display(self):
+        if(self.top == -1):
+            print('STACK IS EMPTY')
+
+        else:
+            print('Elements in stack are..')
+            for i in range(self.top):
+                print('ELEMENT {} => {}'.format(i+1, self.stack[i]))
+
     def peak(self):
 
         if(self.top == -1):
@@ -40,11 +49,10 @@ class Stack:
 
 
 if __name__ == "__main__":
-
     newStack = Stack()
     size = int(input('Enter the size of the stack : '))
     choice = '0'
-    while(choice != ''):
+    while(choice != '4'):
         print("------------------------------------\n")
         print("    STACK IMPLEMENTATION PROGRAM    \n")
         print("------------------------------------\n")
@@ -52,6 +60,7 @@ if __name__ == "__main__":
         print("2. Pop\n")
         print("3. Peek\n")
         print("4. Exit\n")
+        print("5. Display Elements\n")
         print("------------------------------------\n")
         choice = (input("Enter your choice: "))
 
@@ -63,5 +72,7 @@ if __name__ == "__main__":
             newStack.peak()
         elif(choice == '4'):
             choice = '4'
+        elif(choice == '5'):
+            newStack.display()
         else:
             print('Invalid INPUT! Try again')

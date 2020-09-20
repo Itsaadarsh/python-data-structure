@@ -16,3 +16,14 @@ class Stack:
             print(temp.data, "=>", end=" ")
             temp = temp.next
         return
+
+    def pushing(self):
+        data = input('Enter DATA : ')
+        if(self.top is None):
+            self.top = Node(data)
+            print('DATA PUSHED')
+        else:
+            newNode = Node(data)
+            newNode.next = self.top
+            self.top = newNode
+            print('DATA PUSHED')

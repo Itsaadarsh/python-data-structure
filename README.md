@@ -1,4 +1,4 @@
-# python-crash-course
+# python-data-structure
 Refreshing my Python knowledge!
 ## Support & Feedbacks
 

@@ -51,7 +51,7 @@ class Stack:
 if __name__ == "__main__":
     newStack = Stack()
     size = int(input('Enter the size of the stack : '))
-    choice = '0'
+    choice = '-1'
     while(choice != '4'):
         print("------------------------------------\n")
         print("    STACK IMPLEMENTATION PROGRAM    \n")

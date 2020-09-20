@@ -27,3 +27,12 @@ class Stack:
             newNode.next = self.top
             self.top = newNode
             print('DATA PUSHED')
+
+    def popping(self):
+        if(self.top is None):
+            print('STACK IS EMPTY')
+        else:
+            temp = self.top
+            self.top = self.top.next
+            temp.next = None
+            print('\n\nDATA POPPED')

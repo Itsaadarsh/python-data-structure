@@ -36,3 +36,10 @@ class Stack:
             self.top = self.top.next
             temp.next = None
             print('\n\nDATA POPPED')
+
+    def peak(self):
+        if(self.top is None):
+            print('STACK IS EMPTY')
+
+        else:
+            print("\n\nTOP element in the stack is {}".format(self.top.data))

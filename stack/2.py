@@ -6,9 +6,13 @@ class Node:
 
 class Stack:
     def __init__(self):
-        self.head = None
+        self.top = None
 
+    def display(self):
 
-if __name__ == "__main__":
-
-    newStack = Stack()
+        temp = self.top
+        print('\nElements in the linkedlist STACK are...')
+        while(temp):
+            print(temp.data, "=>", end=" ")
+            temp = temp.next
+        return

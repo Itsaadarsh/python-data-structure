@@ -28,3 +28,12 @@ class Stack:
             self.stack.pop()
             self.top -= 1
             print('Data Popped {}'.format(self.stack))
+
+    def peak(self):
+
+        if(self.top == -1):
+            print('STACK IS EMPTY')
+
+        else:
+            print('Top Element in the stack is {}'.format(
+                self.stack[self.top]))

@@ -17,3 +17,14 @@ class Stack:
                 self.stack.append(data)
                 self.top += 1
                 print('Data Added {}'.format(self.stack))
+
+    def poping(self):
+
+        if(self.top == -1):
+            print("STACK IS EMPTY")
+
+        else:
+            print('POPPED element is {}'.format(self.stack[self.top]))
+            self.stack.pop()
+            self.top -= 1
+            print('Data Popped {}'.format(self.stack))

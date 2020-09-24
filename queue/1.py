@@ -1,3 +1,5 @@
+# Array implementation Of Queue
+
 class Queue:
 
     def __init__(self, capacity):
@@ -42,3 +44,40 @@ class Queue:
             print('Queue is Empty')
             return
         print('REAR : {}'.format(self.queue[self.rear]))
+
+    def qDisplay(self):
+        for i in range(self.size):
+            print(self.queue[i])
+
+
+if __name__ == "__main__":
+    capacity = int(input('Enter the capacity of the queue : '))
+    newQueue = Queue(capacity)
+    choice = '-1'
+    while(choice != '4'):
+        print("------------------------------------\n")
+        print("    QUEUE IMPLEMENTATION PROGRAM    \n")
+        print("------------------------------------\n")
+        print("1. Enqueue\n")
+        print("2. Dequeue\n")
+        print("3. Front\n")
+        print("4. Exit\n")
+        print("5. Rear\n")
+        print("6. Display\n")
+        print("------------------------------------\n")
+        choice = (input("Enter your choice: "))
+
+        if(choice == '1'):
+            newQueue.enQueue()
+        elif(choice == '2'):
+            newQueue.deQueue()
+        elif(choice == '3'):
+            newQueue.qFront()
+        elif(choice == '4'):
+            choice = '4'
+        elif(choice == '5'):
+            newQueue.qRear()
+        elif(choice == '6'):
+            newQueue.qDisplay()
+        else:
+            print('Invalid INPUT! Try again')

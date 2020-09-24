@@ -32,6 +32,7 @@ class Queue:
         print('{} Dequeued'.format(self.queue[self.front]))
         self.front = (self.front + 1) % (self.capacity)
         self.size -= 1
+        self.qDisplay()
 
     def qFront(self):
         if self.isEmpty():
@@ -47,7 +48,7 @@ class Queue:
 
     def qDisplay(self):
         for i in range(self.size):
-            print(self.queue[i])
+            print(self.queue[i], "=>", end=" ")
 
 
 if __name__ == "__main__":
@@ -55,7 +56,7 @@ if __name__ == "__main__":
     newQueue = Queue(capacity)
     choice = '-1'
     while(choice != '4'):
-        print("------------------------------------\n")
+        print("\n\n------------------------------------\n")
         print("    QUEUE IMPLEMENTATION PROGRAM    \n")
         print("------------------------------------\n")
         print("1. Enqueue\n")

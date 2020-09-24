@@ -30,3 +30,15 @@ class Queue:
         print('{} Dequeued'.format(self.queue[self.front]))
         self.front = (self.front + 1) % (self.capacity)
         self.size -= 1
+
+    def qFront(self):
+        if self.isEmpty():
+            print('Queue is Empty')
+            return
+        print('FRONT : {}'.format(self.queue[self.front]))
+
+    def qRear(self):
+        if self.isEmpty():
+            print('Queue is Empty')
+            return
+        print('REAR : {}'.format(self.queue[self.rear]))

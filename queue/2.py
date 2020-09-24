@@ -22,3 +22,22 @@ class CircularQueue:
         else:
             self.rear = (self.rear + 1) % self.size
             self.queue[self.rear] = data
+
+    def dequeue(self):
+
+        # If queue is empty
+        if(self.front == -1):
+            print('Queue is EMPTY')
+
+        # If there is only one element in the QUEUE
+        elif(self.front == self.rear):
+            temp = self.queue[self.front]
+            self.front = -1
+            self.rear = -1
+            print('Data POPPED {}'.format(temp))
+
+        # If there is more than one element in the queue
+        else:
+            temp = self.queue[self.front]
+            self.front = (self.front + 1) % self.size
+            print('Data POPPED {}'.format(temp))

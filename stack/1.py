@@ -1,9 +1,10 @@
 # Stack implementation using array
 
 class Stack:
-    def __init__(self):
-        self.stack = []
+    def __init__(self, size):
+        self.stack = [None]*size
         self.top = -1
+        self.size = size
 
     def pushing(self, size):
 
@@ -11,12 +12,12 @@ class Stack:
             print("STACK OVERFLOW")
 
         else:
-            for i in range(size):
+            while(self.top != self.size-1):
                 data = input(
-                    "Enter your {} data to PUSH into the stack :".format(i+1))
-                self.stack.append(data)
+                    "Enter your {} data to PUSH into the stack :".format(self.top + 1))
                 self.top += 1
-                print('Data Added {}'.format(self.stack))
+                self.stack[self.top] = data
+                print('Data Added')
 
     def poping(self):
 
@@ -24,10 +25,8 @@ class Stack:
             print("STACK IS EMPTY")
 
         else:
-            print('POPPED element is {}'.format(self.stack[self.top]))
-            self.stack.pop()
+            print('Data Popped {}'.format(self.stack[self.top]))
             self.top -= 1
-            print('Data Popped {}'.format(self.stack))
 
     def display(self):
         if(self.top == -1):
@@ -35,7 +34,7 @@ class Stack:
 
         else:
             print('Elements in stack are..')
-            for i in range(self.top):
+            for i in range(self.top+1):
                 print('ELEMENT {} => {}'.format(i+1, self.stack[i]))
 
     def peak(self):
@@ -49,8 +48,8 @@ class Stack:
 
 
 if __name__ == "__main__":
-    newStack = Stack()
     size = int(input('Enter the size of the stack : '))
+    newStack = Stack(size)
     choice = '-1'
     while(choice != '4'):
         print("------------------------------------\n")

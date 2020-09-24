@@ -1,18 +1,7 @@
-# Basic queue operation
+class Queue:
 
-queue = []
-
-queue.append('a')
-queue.append('b')
-queue.append('c')
-
-print("Initial queue")
-print(queue)
-
-print("\nElements dequeued from queue")
-print(queue.pop(0))
-print(queue.pop(0))
-print(queue.pop(0))
-
-print("\nQueue after removing elements")
-print(queue)
+    def __init__(self, capacity):
+        self.front = self.size = 0
+        self.rear = capacity - 1
+        self.Q = [None]*capacity
+        self.capacity = capacity

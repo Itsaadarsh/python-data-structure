@@ -41,3 +41,50 @@ class CircularQueue:
             temp = self.queue[self.front]
             self.front = (self.front + 1) % self.size
             print('Data POPPED {}'.format(temp))
+
+    def displayQueue(self):
+
+        if(self.front == -1):
+            print('Queue is EMPTY')
+
+        elif(self.rear >= self.front):
+            print('Elements are : ')
+            for i in range(self.front, self.rear + 1):
+                print(self.queue[i], end=" ")
+
+        else:
+            print('Elements are : ', end=" ")
+            for i in range(self.front, self.size):
+                print(self.queue[i], end=" ")
+            for i in range(0, self.rear + 1):
+                print(self.queue[i], end=" ")
+
+        if((self.rear + 1) % self.size == self.front):
+            print('\n\nQueue is FULL')
+
+
+if __name__ == "__main__":
+    capacity = int(input('Enter the capacity of the queue : '))
+    newQueue = CircularQueue(capacity)
+    choice = '-1'
+    while(choice != '4'):
+        print("\n\n------------------------------------\n")
+        print("    QUEUE IMPLEMENTATION PROGRAM    \n")
+        print("------------------------------------\n")
+        print("1. Enqueue\n")
+        print("2. Dequeue\n")
+        print("3. Display\n")
+        print("4. Exit\n")
+        print("------------------------------------\n")
+        choice = (input("Enter your choice: "))
+
+        if(choice == '1'):
+            newQueue.enqueue()
+        elif(choice == '2'):
+            newQueue.dequeue()
+        elif(choice == '3'):
+            newQueue.displayQueue()
+        elif(choice == '4'):
+            choice = '4'
+        else:
+            print('Invalid INPUT! Try again')

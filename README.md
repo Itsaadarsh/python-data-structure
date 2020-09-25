@@ -1,5 +1,9 @@
 # python-data-structure
-Refreshing my Python knowledge!
+
+- LinkedList
+- Stack
+- Queue
+
 ## Support & Feedbacks
 
 - [LinkedIN](https://www.linkedin.com/in/itsaadarsh/ 'Linkedin') - Aadarsh S (itsaadarsh)

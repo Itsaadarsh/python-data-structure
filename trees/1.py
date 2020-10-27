@@ -7,11 +7,12 @@ class Node():
 
 def displayTree(temp):
 
-    print(temp.key)
-    print(temp.left.key)
-    print(temp.left.left.key)
-    print(temp.right.key)
-    print(temp.right.right.key)
+    if (not temp):
+        return
+
+    displayTree(temp.left)
+    print(temp.key, end=" ")
+    displayTree(temp.right)
 
 
 if __name__ == "__main__":

@@ -4,6 +4,8 @@ class Node():
         self.right = None
         self.key = data
 
+# Displaying the value in the binary tree
+
 
 def displayTree(temp):
 
@@ -15,6 +17,7 @@ def displayTree(temp):
     displayTree(temp.right)
 
 
+# Inserting into a binary tree
 def insert(parent, data):
 
     if(parent is None):
